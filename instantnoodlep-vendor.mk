@@ -6,7 +6,6 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/oneplus/instantnoodlep
 
 PRODUCT_COPY_FILES += \
-    vendor/oneplus/instantnoodlep/proprietary/odm/bin/wlchgmonitor:$(TARGET_COPY_OUT_ODM)/bin/wlchgmonitor \
     vendor/oneplus/instantnoodlep/proprietary/odm/etc/acdbdata/Audio_Parameter_Version.txt:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Audio_Parameter_Version.txt \
     vendor/oneplus/instantnoodlep/proprietary/odm/etc/acdbdata/Bluetooth_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/Bluetooth_cal.acdb \
     vendor/oneplus/instantnoodlep/proprietary/odm/etc/acdbdata/General_cal.acdb:$(TARGET_COPY_OUT_ODM)/etc/acdbdata/General_cal.acdb \
@@ -99,11 +98,6 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti.tuned.semco_s5k3m5.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.tuned.semco_s5k3m5.bin \
     vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti.tuned.shine_gc5035.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.tuned.shine_gc5035.bin \
     vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti.tuned.truly_imx471.bin:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti.tuned.truly_imx471.bin \
-    vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti_instantnoodlep.sensor.gc5035.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti_instantnoodlep.sensor.gc5035.so \
-    vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti_instantnoodlep.sensor.imx471.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti_instantnoodlep.sensor.imx471.so \
-    vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti_instantnoodlep.sensor.imx586.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti_instantnoodlep.sensor.imx586.so \
-    vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti_instantnoodlep.sensor.imx689.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti_instantnoodlep.sensor.imx689.so \
-    vendor/oneplus/instantnoodlep/proprietary/odm/lib64/camera/com.qti_instantnoodlep.sensor.s5k3m5.so:$(TARGET_COPY_OUT_ODM)/lib64/camera/com.qti_instantnoodlep.sensor.s5k3m5.so \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/gfp9608.b00:$(TARGET_COPY_OUT_ODM)/vendor/firmware/gfp9608.b00 \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/gfp9608.b01:$(TARGET_COPY_OUT_ODM)/vendor/firmware/gfp9608.b01 \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/gfp9608.b02:$(TARGET_COPY_OUT_ODM)/vendor/firmware/gfp9608.b02 \
@@ -125,5 +119,13 @@ PRODUCT_COPY_FILES += \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/iris5.fw:$(TARGET_COPY_OUT_ODM)/vendor/firmware/iris5.fw \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/iris5_ccf1.fw:$(TARGET_COPY_OUT_ODM)/vendor/firmware/iris5_ccf1.fw \
     vendor/oneplus/instantnoodlep/proprietary/odm/vendor/firmware/iris5_ccf2.fw:$(TARGET_COPY_OUT_ODM)/vendor/firmware/iris5_ccf2.fw \
-    vendor/oneplus/instantnoodlep/proprietary/vendor/bin/hw/android.hardware.keymaster@4.0-service-qti:$(TARGET_COPY_OUT_VENDOR)/bin/hw/android.hardware.keymaster@4.0-service-qti \
     vendor/oneplus/instantnoodlep/proprietary/vendor/etc/init/android.hardware.keymaster@4.0-service-qti.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.keymaster@4.0-service-qti.rc
+
+PRODUCT_PACKAGES += \
+    com.qti_instantnoodlep.sensor.gc5035 \
+    com.qti_instantnoodlep.sensor.imx471 \
+    com.qti_instantnoodlep.sensor.imx586 \
+    com.qti_instantnoodlep.sensor.imx689 \
+    com.qti_instantnoodlep.sensor.s5k3m5 \
+    android.hardware.keymaster@4.0-service-qti \
+    wlchgmonitor
